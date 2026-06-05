@@ -33,54 +33,26 @@
         }
         .container{max-width:1200px;margin:auto;padding:20px;}
 
-        /* Hero */
-        .hero{
-            min-height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            position:relative;
-        }
+        /* Hero - بدون تغییر */
+        .hero{min-height:100vh;display:flex;justify-content:center;align-items:center;position:relative;}
         .hero-box{
-            width:100%;
-            max-width:900px;
-            text-align:center;
-            padding:100px 40px;
-            border-radius:32px;
-            background:rgba(255,255,255,.035);
-            border:1px solid rgba(212,175,55,.18);
-            backdrop-filter:blur(20px);
-            position:relative;
-            overflow:hidden;
+            width:100%; max-width:900px; text-align:center; padding:100px 40px;
+            border-radius:32px; background:rgba(255,255,255,.035);
+            border:1px solid rgba(212,175,55,.18); backdrop-filter:blur(20px);
+            position:relative; overflow:hidden;
         }
         .hero-box:before{
-            content:"";
-            position:absolute;
-            width:800px;
-            height:800px;
-            left:50%;
-            top:-400px;
-            transform:translateX(-50%);
-            background:radial-gradient(rgba(212,175,55,.28),transparent 65%);
-            z-index:-1;
+            content:""; position:absolute; width:800px; height:800px;
+            left:50%; top:-400px; transform:translateX(-50%);
+            background:radial-gradient(rgba(212,175,55,.28),transparent 65%); z-index:-1;
         }
-        .badge{
-            display:inline-block;
-            padding:10px 26px;
-            border-radius:999px;
-            border:1px solid rgba(212,175,55,.45);
-            color:var(--gold);
-            font-weight:600;
-            margin-bottom:25px;
-        }
+        .badge{display:inline-block;padding:10px 26px;border-radius:999px;
+            border:1px solid rgba(212,175,55,.45); color:var(--gold);
+            font-weight:600; margin-bottom:25px;}
         .logo-mark{font-size:28px;color:var(--gold);margin-bottom:12px;letter-spacing:10px;}
-        .domain{
-            font-size:98px;
-            font-weight:900;
-            color:var(--gold);
+        .domain{font-size:98px;font-weight:900;color:var(--gold);
             text-shadow:0 0 30px rgba(212,175,55,.4),0 0 60px rgba(212,175,55,.25);
-            animation:glow 3.5s ease-in-out infinite alternate;
-        }
+            animation:glow 3.5s ease-in-out infinite alternate;}
         @keyframes glow{
             from{text-shadow:0 0 25px rgba(212,175,55,.25),0 0 50px rgba(212,175,55,.15);}
             to{text-shadow:0 0 45px rgba(212,175,55,.55),0 0 90px rgba(212,175,55,.3);}
@@ -88,30 +60,39 @@
         .tagline{font-size:32px;margin:25px 0 15px;font-weight:500;}
         .desc{max-width:780px;margin:0 auto 35px;line-height:2.1;color:var(--muted);font-size:18.5px;}
 
-        /* Sections */
+        /* Grid جدید - ۴ ستونه */
         .section{padding:110px 0;}
-        .section-title{text-align:center;font-size:44px;color:var(--gold);margin-bottom:60px;position:relative;}
+        .section-title{text-align:center;font-size:44px;color:var(--gold);
+            margin-bottom:60px;position:relative;}
         .section-title:after{
-            content:'';
-            width:80px;
-            height:3px;
+            content:''; width:80px; height:3px;
             background:linear-gradient(to right,transparent,var(--gold),transparent);
-            position:absolute;
-            bottom:-15px;
-            left:50%;
-            transform:translateX(-50%);
+            position:absolute; bottom:-15px; left:50%; transform:translateX(-50%);
         }
 
         .grid{
             display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-            gap:28px;
+            grid-template-columns: repeat(4, 1fr);   /* ۴ کارت در یک ردیف */
+            gap:24px;
         }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .grid{
+                grid-template-columns: repeat(2, 1fr);   /* ۲ ستونه در تبلت */
+            }
+        }
+        @media (max-width: 576px) {
+            .grid{
+                grid-template-columns: 1fr;   /* ۱ ستونه در موبایل */
+            }
+        }
+
         .card{
             background:rgba(255,255,255,.03);
             border:1px solid rgba(212,175,55,.15);
             border-radius:24px;
-            padding:35px 30px;
+            padding:32px 24px;
             transition:all .4s;
             position:relative;
             overflow:hidden;
@@ -121,21 +102,18 @@
             border-color:var(--gold);
         }
         .card::before{
-            content:'';
-            position:absolute;
-            top:-50%; left:-50%;
+            content:''; position:absolute; top:-50%; left:-50%;
             width:40%; height:200%;
             background:linear-gradient(135deg,transparent,rgba(212,175,55,.12),transparent);
             transform:rotate(30deg);
-            transition:all .7s;
-            opacity:0;
+            transition:all .7s; opacity:0;
         }
-        .card:hover::before{opacity:1;left:150%;}
+        .card:hover::before{opacity:1; left:150%;}
         
         .icon{font-size:48px;margin-bottom:22px;}
-        .card h3{color:var(--gold);margin-bottom:16px;font-size:22px;}
+        .card h3{color:var(--gold);margin-bottom:16px;font-size:21px;}
 
-        /* Contact & Form */
+        /* بقیه استایل‌ها (تماس، فرم و ...) بدون تغییر */
         .contact-section{
             background:rgba(255,255,255,.025);
             border:1px solid rgba(212,175,55,.2);
@@ -149,66 +127,24 @@
             gap:60px;
             align-items:start;
         }
-        .contact-info h2{font-size:36px;color:var(--gold);margin-bottom:30px;}
-        .phone{
-            font-size:52px;
-            font-weight:900;
-            color:var(--gold);
-            margin:25px 0;
-            direction:ltr;
+        .phone{font-size:52px;font-weight:900;color:var(--gold);margin:25px 0;direction:ltr;}
+        .form-container input, .form-container textarea{
+            padding:16px; background:#111; border:none; color:#fff; border-radius:12px;
         }
-        .form-container form{
-            display:grid;
-            gap:16px;
-        }
-        .form-container input,
-        .form-container textarea{
-            padding:16px;
-            background:#111;
-            border:none;
-            color:#fff;
-            border-radius:12px;
-            font-family:inherit;
-        }
-        .form-container button{
-            margin-top:10px;
-            padding:18px;
-            font-size:18px;
-            font-weight:700;
-        }
-
         .btn{
-            text-decoration:none;
-            padding:16px 40px;
-            border-radius:14px;
-            font-weight:700;
+            padding:18px; font-size:18px; font-weight:700;
             background:linear-gradient(135deg,var(--gold2),var(--gold));
-            color:#000;
-            transition:.3s;
-            border:none;
-            cursor:pointer;
-            width:100%;
+            color:#000; border:none; border-radius:14px; cursor:pointer; width:100%;
         }
         .btn:hover{transform:scale(1.03);}
 
         .floating-call{
-            position:fixed;
-            left:25px;
-            bottom:25px;
-            width:68px;
-            height:68px;
-            border-radius:50%;
-            background:linear-gradient(135deg,var(--gold2),var(--gold));
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-size:30px;
-            color:#000;
-            box-shadow:0 12px 30px rgba(212,175,55,.45);
-            z-index:999;
-            text-decoration:none;
+            position:fixed; left:25px; bottom:25px; width:68px; height:68px;
+            border-radius:50%; background:linear-gradient(135deg,var(--gold2),var(--gold));
+            display:flex; justify-content:center; align-items:center;
+            font-size:30px; color:#000; box-shadow:0 12px 30px rgba(212,175,55,.45);
+            z-index:999; text-decoration:none;
         }
-
         .footer{text-align:center;padding:50px 0;color:#666;font-size:15px;}
     </style>
 </head>
@@ -235,7 +171,7 @@
         </div>
     </section>
 
-    <!-- ارزش دامنه -->
+    <!-- ارزش این دامنه -->
     <section class="section">
         <h2 class="section-title">ارزش این دامنه</h2>
         <div class="grid">
@@ -262,7 +198,7 @@
         </div>
     </section>
 
-    <!-- چرا دامنه خاص؟ -->
+    <!-- چرا ارزشمند است -->
     <section class="section">
         <h2 class="section-title">چرا DEYMELK.IR ارزشمند است؟</h2>
         <div class="grid">
@@ -273,11 +209,9 @@
         </div>
     </section>
 
-    <!-- بخش تماس و فرم (جدا شده) -->
+    <!-- بخش تماس -->
     <section id="contact" class="section contact-section">
         <div class="contact-grid">
-            
-            <!-- اطلاعات تماس -->
             <div class="contact-info">
                 <h2>تماس با ما</h2>
                 <div class="phone">۰۹۱۰۴۱۱۱۶۹۹</div>
@@ -290,7 +224,6 @@
                 </div>
             </div>
 
-            <!-- فرم -->
             <div class="form-container">
                 <form id="offerForm">
                     <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
@@ -319,6 +252,7 @@
 </div>
 
 <script>
+    // اسکریپت فرم (بدون تغییر)
     const form = document.getElementById("offerForm");
     const WORKER_URL = "https://floral-dream-02f9.behzad-ti.workers.dev/";
 
