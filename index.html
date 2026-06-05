@@ -1,7 +1,6 @@
-```html
 <!--
 DEYMELK.IR PREMIUM LANDING PAGE
-Version: Ultimate
+Version: Ultimate + Telegram Offer System
 -->
 
 <!DOCTYPE html>
@@ -300,27 +299,69 @@ padding:40px 0;
 color:#777;
 }
 
+/* ===================== */
+/* ✅ OFFER FORM SECTION  */
+/* ===================== */
+
+.offer-form-section{
+padding:80px 20px;
+text-align:center;
+}
+
+.offer-form{
+max-width:700px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.offer-form input,
+.offer-form textarea{
+padding:14px;
+border-radius:12px;
+border:1px solid rgba(212,175,55,.2);
+background:rgba(0,0,0,.35);
+color:#fff;
+outline:none;
+font-family:inherit;
+}
+
+.offer-form textarea{
+min-height:120px;
+resize:none;
+}
+
+.offer-form button{
+padding:16px;
+border:none;
+border-radius:14px;
+cursor:pointer;
+font-weight:700;
+background:linear-gradient(135deg,#f6d365,#d4af37);
+color:#000;
+transition:.3s;
+}
+
+.offer-form button:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(212,175,55,.25);
+}
+
+.status{
+margin-top:10px;
+color:#aaa;
+font-size:13px;
+min-height:20px;
+}
+
 @media(max-width:768px){
 
-.domain{
-font-size:48px;
-}
-
-.tagline{
-font-size:22px;
-}
-
-.phone{
-font-size:32px;
-}
-
-.section-title{
-font-size:30px;
-}
-
-.hero-box{
-padding:60px 25px;
-}
+.domain{font-size:48px;}
+.tagline{font-size:22px;}
+.phone{font-size:32px;}
+.section-title{font-size:30px;}
+.hero-box{padding:60px 25px;}
 
 }
 
@@ -333,25 +374,18 @@ padding:60px 25px;
 
 <div class="container">
 
+<!-- HERO -->
 <section class="hero">
 
 <div class="hero-box">
 
-<div class="badge">
-PREMIUM DOMAIN ASSET
-</div>
+<div class="badge">PREMIUM DOMAIN ASSET</div>
 
-<div class="logo-mark">
-◆ DEYMELK ◆
-</div>
+<div class="logo-mark">◆ DEYMELK ◆</div>
 
-<h1 class="domain">
-DEYMELK.IR
-</h1>
+<h1 class="domain">DEYMELK.IR</h1>
 
-<div class="tagline">
-یک برند قدرتمند برای صنعت املاک
-</div>
+<div class="tagline">یک برند قدرتمند برای صنعت املاک</div>
 
 <div class="desc">
 فرصتی برای تملک یک نام ماندگار، کوتاه و تخصصی در بازار املاک ایران.
@@ -359,131 +393,75 @@ DEYMELK.IR
 </div>
 
 <div class="offer-box">
-<div class="offer-title">
-وضعیت فعلی دامنه
-</div>
-<div class="offer-value">
-در حال بررسی پیشنهادات خرید
-</div>
+<div class="offer-title">وضعیت فعلی دامنه</div>
+<div class="offer-value">در حال بررسی پیشنهادات خرید</div>
 </div>
 
 </div>
 
 </section>
 
+<!-- FEATURES -->
 <section class="section">
 
-<h2 class="section-title">
-ارزش این دامنه
-</h2>
+<h2 class="section-title">ارزش این دامنه</h2>
 
 <div class="grid">
 
-<div class="card">
-<div class="icon">🏢</div>
-<h3>برند تخصصی املاک</h3>
-<p>
-نامی کوتاه و مرتبط با صنعت املاک که به سادگی در ذهن مخاطب ماندگار می‌شود.
-</p>
-</div>
+<div class="card"><div class="icon">🏢</div><h3>برند تخصصی املاک</h3><p>نامی کوتاه و ماندگار.</p></div>
 
-<div class="card">
-<div class="icon">🚀</div>
-<h3>مناسب توسعه کسب‌وکار</h3>
-<p>
-ایده‌آل برای پلتفرم‌های ملکی، استارتاپ‌های PropTech و آژانس‌های املاک.
-</p>
-</div>
+<div class="card"><div class="icon">🚀</div><h3>مقیاس‌پذیر</h3><p>مناسب استارتاپ و پلتفرم‌های ملکی.</p></div>
 
-<div class="card">
-<div class="icon">📈</div>
-<h3>دارایی دیجیتال ارزشمند</h3>
-<p>
-دامنه‌های برندپذیر و کوتاه هر سال کمیاب‌تر و ارزشمندتر می‌شوند.
-</p>
-</div>
+<div class="card"><div class="icon">📈</div><h3>دارایی دیجیتال</h3><p>کمیاب و رو به افزایش ارزش.</p></div>
 
-<div class="card">
-<div class="icon">🔑</div>
-<h3>انتقال سریع</h3>
-<p>
-پس از توافق نهایی، انتقال مالکیت دامنه در کوتاه‌ترین زمان انجام می‌شود.
-</p>
-</div>
+<div class="card"><div class="icon">🔑</div><h3>انتقال سریع</h3><p>پس از توافق فوری منتقل می‌شود.</p></div>
 
 </div>
 
 </section>
 
-<section class="section">
-
-<h2 class="section-title">
-چرا دامنه‌های خاص ارزشمندند؟
-</h2>
-
-<div class="stats">
-
-<div class="stat">
-<div class="number">IR</div>
-<div class="label">پسوند ملی ایران</div>
-</div>
-
-<div class="stat">
-<div class="number">100%</div>
-<div class="label">مالکیت قانونی</div>
-</div>
-
-<div class="stat">
-<div class="number">Brand</div>
-<div class="label">قابل توسعه به برند ملی</div>
-</div>
-
-<div class="stat">
-<div class="number">Unique</div>
-<div class="label">نام اختصاصی و متمایز</div>
-</div>
-
-</div>
-
-</section>
-
+<!-- CONTACT -->
 <section class="section">
 
 <div class="contact">
 
-<h2 class="section-title">
-ثبت پیشنهاد خرید
-</h2>
+<h2 class="section-title">تماس مستقیم</h2>
 
-<div class="phone">
-۰۹۱۰۴۱۱۱۶۹۹
-</div>
+<div class="phone">09104111699</div>
 
-<div class="contact-item">
-📱 Telegram: @behzadtii
-</div>
-
-<div class="contact-item">
-✉️ behzad-ti@live.com
-</div>
+<div class="contact-item">📱 @behzadtii</div>
+<div class="contact-item">✉️ behzad-ti@live.com</div>
 
 <div class="buttons">
-
-<a href="tel:09104111699" class="btn">
-تماس مستقیم
-</a>
-
-<a href="https://t.me/behzadtii" class="btn">
-تلگرام
-</a>
-
-<a href="mailto:behzad-ti@live.com" class="btn">
-ایمیل
-</a>
-
+<a href="tel:09104111699" class="btn">تماس</a>
+<a href="https://t.me/behzadtii" class="btn">تلگرام</a>
+<a href="mailto:behzad-ti@live.com" class="btn">ایمیل</a>
 </div>
 
 </div>
+
+</section>
+
+<!-- OFFER FORM -->
+<section class="offer-form-section">
+
+<h2 class="section-title">ثبت پیشنهاد خرید</h2>
+
+<form id="offerForm" class="offer-form">
+
+<input type="text" name="name" placeholder="نام و نام خانوادگی" required>
+
+<input type="tel" name="phone" placeholder="شماره تماس" required>
+
+<input type="text" name="price" placeholder="مبلغ پیشنهادی (تومان)" required>
+
+<textarea name="message" placeholder="توضیحات (اختیاری)"></textarea>
+
+<button type="submit" id="btn">ارسال پیشنهاد</button>
+
+<div class="status" id="status"></div>
+
+</form>
 
 </section>
 
@@ -493,6 +471,55 @@ DEYMELK.IR
 
 </div>
 
+<script>
+const botToken = "YOUR_BOT_TOKEN";
+const chatId = "YOUR_CHAT_ID";
+
+const form = document.getElementById("offerForm");
+const status = document.getElementById("status");
+const btn = document.getElementById("btn");
+
+form.addEventListener("submit", async (e) => {
+e.preventDefault();
+
+btn.disabled = true;
+btn.innerText = "در حال ارسال...";
+
+const f = e.target;
+
+const text =
+`🏷 New Offer - DEYMELK.IR
+
+👤 Name: ${f.name.value}
+📞 Phone: ${f.phone.value}
+💰 Price: ${f.price.value}
+
+📝 Message:
+${f.message.value || "-"}
+
+⏱ Time: ${new Date().toLocaleString()}`;
+
+try {
+await fetch(`https://api.telegram.org/bot${8906895090:AAHvBCtyXMtxSXAs7p9imk8ew5N5_IMab7Q}/sendMessage`, {
+method: "POST",
+headers: {"Content-Type":"application/json"},
+body: JSON.stringify({
+chat_id: 8906895090,
+text: text
+})
+});
+
+status.innerText = "✔ پیشنهاد با موفقیت ارسال شد";
+form.reset();
+
+} catch(err) {
+status.innerText = "خطا در ارسال";
+}
+
+btn.disabled = false;
+btn.innerText = "ارسال پیشنهاد";
+});
+</script>
+
 </body>
 </html>
-```
