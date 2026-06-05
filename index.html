@@ -171,99 +171,12 @@ color:var(--gold);
 margin-bottom:50px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
-
-.card{
-background:rgba(255,255,255,.03);
-border:1px solid rgba(212,175,55,.12);
-border-radius:24px;
-padding:30px;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:rgba(212,175,55,.45);
-}
-
-.icon{
-font-size:42px;
-margin-bottom:20px;
-}
-
-.card h3{
-color:var(--gold);
-margin-bottom:15px;
-}
-
-.card p{
-line-height:2;
-color:#d0d0d0;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.stat{
-text-align:center;
-padding:35px;
-background:rgba(255,255,255,.03);
-border-radius:20px;
-}
-
-.number{
-font-size:38px;
-font-weight:900;
-color:var(--gold);
-}
-
-.label{
-margin-top:10px;
-color:#ccc;
-}
-
-.contact{
-padding:60px;
-text-align:center;
-border-radius:30px;
-background:rgba(255,255,255,.03);
-border:1px solid rgba(212,175,55,.15);
-}
-
-.phone{
-font-size:50px;
-font-weight:900;
-color:var(--gold);
-margin:20px 0;
-}
-
-.contact-item{
-margin:12px 0;
-color:#ddd;
-}
-
-.buttons{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:15px;
-margin-top:30px;
-}
-
 .btn{
 text-decoration:none;
 padding:16px 35px;
 border-radius:14px;
 font-weight:700;
-background:
-linear-gradient(135deg,var(--gold2),var(--gold));
+background:linear-gradient(135deg,var(--gold2),var(--gold));
 color:#000;
 transition:.3s;
 border:none;
@@ -300,13 +213,72 @@ padding:40px 0;
 color:#777;
 }
 
+/* ====== ONLY UPDATED FORM DESIGN ====== */
+
+.contact{
+padding:60px;
+text-align:center;
+border-radius:30px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.15);
+}
+
+input, select, textarea{
+width:100%;
+padding:14px;
+margin:8px 0;
+border-radius:12px;
+border:1px solid rgba(212,175,55,.2);
+background:rgba(0,0,0,.25);
+color:#fff;
+outline:none;
+}
+
+textarea{
+height:140px;
+resize:none;
+}
+
+input:focus, select:focus, textarea:focus{
+border-color:rgba(212,175,55,.6);
+box-shadow:0 0 10px rgba(212,175,55,.15);
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.form-note{
+font-size:13px;
+color:#888;
+margin-bottom:20px;
+line-height:2;
+}
+
+.submit-wrap{
+margin-top:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:10px;
+flex-wrap:wrap;
+}
+
+.small-note{
+font-size:12px;
+color:#777;
+}
+
+/* mobile */
 @media(max-width:768px){
 
 .domain{font-size:48px;}
 .tagline{font-size:22px;}
-.phone{font-size:32px;}
 .section-title{font-size:30px;}
 .hero-box{padding:60px 25px;}
+.grid-2{grid-template-columns:1fr;}
 }
 
 </style>
@@ -344,7 +316,7 @@ color:#777;
 
 </section>
 
-<!-- ====== FORM ADDED (ONLY NEW FEATURE) ====== -->
+<!-- ====== FORM (UPGRADED ONLY) ====== -->
 
 <section class="section">
 
@@ -354,15 +326,25 @@ color:#777;
 
 <form id="offerForm">
 
-<input name="name" type="text" placeholder="نام کامل" required style="width:100%;padding:12px;margin:8px 0;border-radius:10px;border:none;">
+<div class="form-note">
+این فرم برای دریافت پیشنهادهای واقعی خرید طراحی شده است.  
+لطفاً اطلاعات را دقیق وارد کنید تا بررسی سریع‌تر انجام شود.
+</div>
 
-<input name="phone" type="tel" placeholder="شماره تماس" required style="width:100%;padding:12px;margin:8px 0;border-radius:10px;border:none;">
+<div class="grid-2">
 
-<input name="email" type="email" placeholder="ایمیل (اختیاری)" style="width:100%;padding:12px;margin:8px 0;border-radius:10px;border:none;">
+<input name="name" type="text" placeholder="نام کامل" required>
+<input name="phone" type="tel" placeholder="شماره تماس" required>
 
-<input name="offer" type="number" placeholder="مبلغ پیشنهادی (تومان)" required style="width:100%;padding:12px;margin:8px 0;border-radius:10px;border:none;">
+</div>
 
-<select name="budget" required style="width:100%;padding:12px;margin:8px 0;border-radius:10px;border:none;">
+<input name="email" type="email" placeholder="ایمیل (اختیاری)">
+
+<div class="grid-2">
+
+<input name="offer" type="number" placeholder="مبلغ پیشنهادی (تومان)" required>
+
+<select name="budget" required>
   <option value="">بودجه تقریبی</option>
   <option>زیر 100 میلیون</option>
   <option>100 تا 300 میلیون</option>
@@ -370,9 +352,21 @@ color:#777;
   <option>بالای 1 میلیارد</option>
 </select>
 
-<textarea name="message" placeholder="توضیحات بیشتر" style="width:100%;padding:12px;margin:8px 0;border-radius:10px;border:none;height:120px;"></textarea>
+</div>
 
-<button class="btn" type="submit">ارسال پیشنهاد</button>
+<textarea name="message" placeholder="توضیحات / هدف خرید / پیشنهاد شما"></textarea>
+
+<div class="submit-wrap">
+
+<div class="small-note">
+⚡ پاسخ‌گویی معمولاً زیر ۲۴ ساعت
+</div>
+
+<button class="btn" type="submit">
+ارسال پیشنهاد
+</button>
+
+</div>
 
 </form>
 
