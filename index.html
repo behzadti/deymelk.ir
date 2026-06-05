@@ -1,188 +1,498 @@
+```html
+<!--
+DEYMELK.IR PREMIUM LANDING PAGE
+Version: Ultimate
+-->
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>دامنه deymelk.ir برای فروش</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>DEYMELK.IR | Premium Real Estate Brand</title>
+
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
 
 <style>
+
+:root{
+--gold:#d4af37;
+--gold2:#f6d365;
+--dark:#050505;
+--card:#101010;
+--text:#ffffff;
+--muted:#b9b9b9;
+}
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:tahoma,sans-serif;
-    background:#0f172a;
-    color:#fff;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
+font-family:'Vazirmatn',sans-serif;
+background:
+radial-gradient(circle at top,rgba(212,175,55,.18),transparent 40%),
+linear-gradient(135deg,#030303,#0d0d0d);
+color:#fff;
+overflow-x:hidden;
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+background:
+linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),
+linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);
+background-size:40px 40px;
+pointer-events:none;
 }
 
 .container{
-    width:100%;
-    max-width:800px;
-    background:rgba(255,255,255,.05);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,.1);
-    border-radius:20px;
-    padding:50px 30px;
-    text-align:center;
-    box-shadow:0 20px 50px rgba(0,0,0,.4);
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.hero-box{
+width:100%;
+text-align:center;
+padding:90px 40px;
+border-radius:30px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.15);
+backdrop-filter:blur(20px);
+position:relative;
+overflow:hidden;
+}
+
+.hero-box:before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+left:50%;
+top:-350px;
+transform:translateX(-50%);
+background:
+radial-gradient(rgba(212,175,55,.25),transparent 70%);
 }
 
 .badge{
-    display:inline-block;
-    background:#dc2626;
-    color:#fff;
-    padding:8px 20px;
-    border-radius:50px;
-    font-size:14px;
-    margin-bottom:25px;
+display:inline-block;
+padding:10px 22px;
+border-radius:999px;
+border:1px solid rgba(212,175,55,.4);
+color:var(--gold);
+margin-bottom:30px;
+}
+
+.logo-mark{
+font-size:26px;
+color:var(--gold);
+margin-bottom:10px;
+letter-spacing:8px;
 }
 
 .domain{
-    font-size:60px;
-    font-weight:bold;
-    color:#f8fafc;
-    margin-bottom:15px;
+font-size:92px;
+font-weight:900;
+color:var(--gold);
+text-shadow:
+0 0 20px rgba(212,175,55,.35),
+0 0 40px rgba(212,175,55,.25);
+animation:glow 4s infinite alternate;
 }
 
-.subtitle{
-    color:#cbd5e1;
-    font-size:18px;
-    margin-bottom:35px;
+@keyframes glow{
+from{
+text-shadow:
+0 0 20px rgba(212,175,55,.2),
+0 0 40px rgba(212,175,55,.1);
+}
+to{
+text-shadow:
+0 0 40px rgba(212,175,55,.5),
+0 0 80px rgba(212,175,55,.25);
+}
 }
 
-.price{
-    font-size:42px;
-    color:#22c55e;
-    font-weight:bold;
-    margin-bottom:35px;
+.tagline{
+margin-top:20px;
+font-size:30px;
 }
 
-.features{
-    text-align:right;
-    background:rgba(255,255,255,.04);
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:35px;
-    line-height:2.2;
+.desc{
+max-width:800px;
+margin:25px auto;
+line-height:2.2;
+color:var(--muted);
 }
 
-.contact-box{
-    background:rgba(255,255,255,.04);
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:25px;
+.offer-box{
+display:inline-block;
+margin-top:30px;
+padding:22px 35px;
+border-radius:18px;
+background:rgba(212,175,55,.06);
+border:1px solid rgba(212,175,55,.15);
 }
 
-.contact-box p{
-    margin:10px 0;
-    font-size:18px;
+.offer-title{
+color:var(--gold);
+font-size:14px;
+margin-bottom:8px;
+}
+
+.offer-value{
+font-size:26px;
+font-weight:800;
+}
+
+.section{
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+color:var(--gold);
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.12);
+border-radius:24px;
+padding:30px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:rgba(212,175,55,.45);
+}
+
+.icon{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.card h3{
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.card p{
+line-height:2;
+color:#d0d0d0;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat{
+text-align:center;
+padding:35px;
+background:rgba(255,255,255,.03);
+border-radius:20px;
+}
+
+.number{
+font-size:38px;
+font-weight:900;
+color:var(--gold);
+}
+
+.label{
+margin-top:10px;
+color:#ccc;
+}
+
+.contact{
+padding:60px;
+text-align:center;
+border-radius:30px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(212,175,55,.15);
+}
+
+.phone{
+font-size:50px;
+font-weight:900;
+color:var(--gold);
+margin:20px 0;
+}
+
+.contact-item{
+margin:12px 0;
+color:#ddd;
 }
 
 .buttons{
-    display:flex;
-    gap:15px;
-    justify-content:center;
-    flex-wrap:wrap;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:30px;
 }
 
 .btn{
-    text-decoration:none;
-    padding:15px 35px;
-    border-radius:10px;
-    font-size:18px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.telegram{
-    background:#229ED9;
-    color:white;
-}
-
-.call{
-    background:#22c55e;
-    color:white;
-}
-
-.email{
-    background:#6366f1;
-    color:white;
+text-decoration:none;
+padding:16px 35px;
+border-radius:14px;
+font-weight:700;
+background:
+linear-gradient(
+135deg,
+var(--gold2),
+var(--gold));
+color:#000;
+transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+transform:translateY(-4px);
+box-shadow:0 15px 30px rgba(212,175,55,.25);
 }
 
-@media(max-width:600px){
-    .domain{
-        font-size:38px;
-    }
-
-    .price{
-        font-size:30px;
-    }
+.floating-call{
+position:fixed;
+left:20px;
+bottom:20px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:linear-gradient(135deg,var(--gold2),var(--gold));
+display:flex;
+justify-content:center;
+align-items:center;
+text-decoration:none;
+font-size:28px;
+color:#000;
+font-weight:bold;
+box-shadow:0 10px 25px rgba(212,175,55,.4);
+z-index:999;
 }
+
+.footer{
+text-align:center;
+padding:40px 0;
+color:#777;
+}
+
+@media(max-width:768px){
+
+.domain{
+font-size:48px;
+}
+
+.tagline{
+font-size:22px;
+}
+
+.phone{
+font-size:32px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.hero-box{
+padding:60px 25px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<a class="floating-call" href="tel:09104111699">☎</a>
+
 <div class="container">
 
-    <div class="badge">دامنه ویژه برای فروش</div>
+<section class="hero">
 
-    <h1 class="domain">deymelk.ir</h1>
+<div class="hero-box">
 
-    <div class="subtitle">
-        دامنه برندپذیر و مناسب کسب‌وکارهای حوزه املاک
-    </div>
+<div class="badge">
+PREMIUM DOMAIN ASSET
+</div>
 
-    <div class="price">
-        ۲۹۸ میلیون تومان
-    </div>
+<div class="logo-mark">
+◆ DEYMELK ◆
+</div>
 
-    <div class="features">
-        <strong>مزایای دامنه:</strong><br>
-        ✓ کوتاه و به‌یادماندنی<br>
-        ✓ مناسب برندینگ حرفه‌ای در حوزه املاک<br>
-        ✓ تلفظ ساده و ماندگار<br>
-        ✓ مناسب سایت‌های آگهی، مشاور املاک و پلتفرم‌های ملکی<br>
-        ✓ مالکیت و انتقال فوری
-    </div>
+<h1 class="domain">
+DEYMELK.IR
+</h1>
 
-    <div class="contact-box">
-        <h2>تماس برای خرید</h2>
+<div class="tagline">
+یک برند قدرتمند برای صنعت املاک
+</div>
 
-        <p>📞 09104111699</p>
+<div class="desc">
+فرصتی برای تملک یک نام ماندگار، کوتاه و تخصصی در بازار املاک ایران.
+مناسب برای پلتفرم‌های ملکی، آژانس‌های املاک، شرکت‌های ساختمانی و برندهای سرمایه‌گذاری.
+</div>
 
-        <p>📨 behzad-ti@live.com</p>
+<div class="offer-box">
+<div class="offer-title">
+وضعیت فعلی دامنه
+</div>
+<div class="offer-value">
+در حال بررسی پیشنهادات خرید
+</div>
+</div>
 
-        <p>📱 @behzadtii</p>
-    </div>
+</div>
 
-    <div class="buttons">
-        <a class="btn call" href="tel:09104111699">
-            تماس مستقیم
-        </a>
+</section>
 
-        <a class="btn telegram" href="https://t.me/behzadtii">
-            پیام در تلگرام
-        </a>
+<section class="section">
 
-        <a class="btn email" href="mailto:behzad-ti@live.com">
-            ارسال ایمیل
-        </a>
-    </div>
+<h2 class="section-title">
+ارزش این دامنه
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🏢</div>
+<h3>برند تخصصی املاک</h3>
+<p>
+نامی کوتاه و مرتبط با صنعت املاک که به سادگی در ذهن مخاطب ماندگار می‌شود.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚀</div>
+<h3>مناسب توسعه کسب‌وکار</h3>
+<p>
+ایده‌آل برای پلتفرم‌های ملکی، استارتاپ‌های PropTech و آژانس‌های املاک.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📈</div>
+<h3>دارایی دیجیتال ارزشمند</h3>
+<p>
+دامنه‌های برندپذیر و کوتاه هر سال کمیاب‌تر و ارزشمندتر می‌شوند.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔑</div>
+<h3>انتقال سریع</h3>
+<p>
+پس از توافق نهایی، انتقال مالکیت دامنه در کوتاه‌ترین زمان انجام می‌شود.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2 class="section-title">
+چرا دامنه‌های خاص ارزشمندند؟
+</h2>
+
+<div class="stats">
+
+<div class="stat">
+<div class="number">IR</div>
+<div class="label">پسوند ملی ایران</div>
+</div>
+
+<div class="stat">
+<div class="number">100%</div>
+<div class="label">مالکیت قانونی</div>
+</div>
+
+<div class="stat">
+<div class="number">Brand</div>
+<div class="label">قابل توسعه به برند ملی</div>
+</div>
+
+<div class="stat">
+<div class="number">Unique</div>
+<div class="label">نام اختصاصی و متمایز</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="contact">
+
+<h2 class="section-title">
+ثبت پیشنهاد خرید
+</h2>
+
+<div class="phone">
+09104111699
+</div>
+
+<div class="contact-item">
+📱 Telegram: @behzadtii
+</div>
+
+<div class="contact-item">
+✉️ behzad-ti@live.com
+</div>
+
+<div class="buttons">
+
+<a href="tel:09104111699" class="btn">
+تماس مستقیم
+</a>
+
+<a href="https://t.me/behzadtii" class="btn">
+تلگرام
+</a>
+
+<a href="mailto:behzad-ti@live.com" class="btn">
+ایمیل
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="footer">
+© 2026 DEYMELK.IR | Premium Brand Asset
+</div>
 
 </div>
 
 </body>
 </html>
+```
