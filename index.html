@@ -33,7 +33,7 @@
         }
         .container{max-width:1200px;margin:auto;padding:20px;}
 
-        /* Hero - بدون تغییر */
+        /* Hero */
         .hero{min-height:100vh;display:flex;justify-content:center;align-items:center;position:relative;}
         .hero-box{
             width:100%; max-width:900px; text-align:center; padding:100px 40px;
@@ -60,7 +60,7 @@
         .tagline{font-size:32px;margin:25px 0 15px;font-weight:500;}
         .desc{max-width:780px;margin:0 auto 35px;line-height:2.1;color:var(--muted);font-size:18.5px;}
 
-        /* Grid جدید - ۴ ستونه */
+        /* Grid - 4 ستونه */
         .section{padding:110px 0;}
         .section-title{text-align:center;font-size:44px;color:var(--gold);
             margin-bottom:60px;position:relative;}
@@ -72,20 +72,8 @@
 
         .grid{
             display:grid;
-            grid-template-columns: repeat(4, 1fr);   /* ۴ کارت در یک ردیف */
+            grid-template-columns: repeat(4, 1fr);
             gap:24px;
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .grid{
-                grid-template-columns: repeat(2, 1fr);   /* ۲ ستونه در تبلت */
-            }
-        }
-        @media (max-width: 576px) {
-            .grid{
-                grid-template-columns: 1fr;   /* ۱ ستونه در موبایل */
-            }
         }
 
         .card{
@@ -113,7 +101,7 @@
         .icon{font-size:48px;margin-bottom:22px;}
         .card h3{color:var(--gold);margin-bottom:16px;font-size:21px;}
 
-        /* بقیه استایل‌ها (تماس، فرم و ...) بدون تغییر */
+        /* Contact */
         .contact-section{
             background:rgba(255,255,255,.025);
             border:1px solid rgba(212,175,55,.2);
@@ -146,11 +134,79 @@
             z-index:999; text-decoration:none;
         }
         .footer{text-align:center;padding:50px 0;color:#666;font-size:15px;}
+
+        /* =====================
+           RESPONSIVE
+           ===================== */
+
+        /* تبلت */
+        @media (max-width: 992px) {
+            .grid{ grid-template-columns: repeat(2, 1fr); }
+            .section-title{ font-size:34px; }
+            .section{ padding:70px 0; }
+        }
+
+        /* موبایل */
+        @media (max-width: 576px) {
+            .container{ padding:14px; }
+
+            /* Hero */
+            .hero{ min-height:auto; padding:30px 0; }
+            .hero-box{ padding:44px 20px; border-radius:20px; }
+            .badge{ font-size:11px; padding:7px 16px; margin-bottom:16px; }
+            .logo-mark{ font-size:16px; letter-spacing:4px; margin-bottom:10px; }
+            .domain{ font-size:clamp(36px, 10vw, 64px); }
+            .tagline{ font-size:19px; margin:16px 0 12px; }
+            .desc{ font-size:14.5px; margin-bottom:24px; }
+            .hero .btn{ min-width:unset !important; width:100% !important; display:block !important; }
+
+            /* Sections */
+            .section{ padding:48px 0; }
+            .section-title{ font-size:24px; margin-bottom:36px; }
+
+            /* Grid */
+            .grid{ grid-template-columns:1fr; gap:14px; }
+            .card{ padding:22px 16px; border-radius:16px; }
+            .icon{ font-size:34px; margin-bottom:12px; }
+            .card h3{ font-size:16px; margin-bottom:10px; }
+            .card p{ font-size:13.5px; }
+
+            /* Contact */
+            .contact-section{ padding:36px 16px; border-radius:20px; margin:16px 0; }
+            .contact-grid{ grid-template-columns:1fr; gap:32px; }
+            .contact-info h2{ font-size:22px; }
+            .phone{ font-size:32px; margin:14px 0; }
+            .contact-info p{ font-size:15px !important; margin:14px 0 22px !important; }
+
+            /* Form */
+            .form-container{ width:100%; }
+            .form-container form{
+                display:flex; flex-direction:column; gap:11px;
+            }
+            .form-container input,
+            .form-container textarea{
+                width:100%; font-size:15px; padding:13px;
+                font-family:'Vazirmatn',sans-serif;
+            }
+            .btn{ padding:15px; font-size:15px; font-family:'Vazirmatn',sans-serif; }
+
+            /* Floating call */
+            .floating-call{ width:54px; height:54px; font-size:22px; left:14px; bottom:14px; }
+
+            .footer{ padding:28px 0; font-size:12.5px; }
+        }
+
+        /* موبایل کوچیک */
+        @media (max-width: 360px) {
+            .domain{ font-size:30px; }
+            .tagline{ font-size:16px; }
+            .phone{ font-size:26px; }
+        }
     </style>
 </head>
 <body>
 
-<a class="floating-call" href="tel:09104111699">☎</a>
+<a class="floating-call" href="tel:09104111699">&#9742;</a>
 
 <div class="container">
 
@@ -158,7 +214,7 @@
     <section class="hero">
         <div class="hero-box">
             <div class="badge">PREMIUM REAL ESTATE DOMAIN</div>
-            <div class="logo-mark">◆ DEYMELK ◆</div>
+            <div class="logo-mark">&#9670; DEYMELK &#9670;</div>
             <h1 class="domain">DEYMELK.IR</h1>
             <div class="tagline">برند قدرتمند صنعت املاک ایران</div>
             <div class="desc">
@@ -234,7 +290,7 @@
                     <textarea name="message" placeholder="توضیحات و پیام شما..." rows="5"></textarea>
                     
                     <div style="display:flex;align-items:center;gap:10px;margin-top:8px;">
-                        <input type="checkbox" id="terms" required>
+                        <input type="checkbox" id="terms" required style="width:auto;padding:0;flex-shrink:0;">
                         <label for="terms" style="font-size:14.5px;color:#ccc;cursor:pointer;">
                             شرایط خرید دامنه را مطالعه کرده و قبول دارم
                         </label>
@@ -247,12 +303,11 @@
     </section>
 
     <div class="footer">
-        © 2026 DEYMELK.IR — تمامی حقوق محفوظ است
+        &copy; 2026 DEYMELK.IR — تمامی حقوق محفوظ است
     </div>
 </div>
 
 <script>
-    // اسکریپت فرم (بدون تغییر)
     const form = document.getElementById("offerForm");
     const WORKER_URL = "https://floral-dream-02f9.behzad-ti.workers.dev/";
 
